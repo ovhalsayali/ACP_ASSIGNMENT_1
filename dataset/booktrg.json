@@ -1,0 +1,31 @@
+{
+	"name": "booktrg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqlserver1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "bookid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "bname",
+				"type": "varchar"
+			},
+			{
+				"name": "price",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[book]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "SourceDataset_lvi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqlserver1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "id1",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "name",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[employee]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

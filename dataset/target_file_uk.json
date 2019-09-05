@@ -1,0 +1,25 @@
+{
+	"name": "target_file_uk",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageSayali",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "order_plan_uk",
+				"folderPath": "uk",
+				"container": "sayali"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

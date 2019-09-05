@@ -1,0 +1,43 @@
+{
+	"name": "TestPipeline",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TestPipelineConn",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"EmpId": {
+				"type": "Int",
+				"defaultValue": 99
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "EmpID",
+				"type": "Int32"
+			},
+			{
+				"name": "LastName",
+				"type": "String"
+			},
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "Address",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Employees]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

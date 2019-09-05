@@ -1,0 +1,32 @@
+{
+	"name": "DestinationDataset_lvi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqlserver1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "id1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "bonus",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

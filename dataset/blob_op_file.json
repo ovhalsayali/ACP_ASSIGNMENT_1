@@ -1,0 +1,24 @@
+{
+	"name": "blob_op_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageSayali",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "order_plan",
+				"container": "sayali"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

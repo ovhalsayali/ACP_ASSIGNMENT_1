@@ -1,0 +1,118 @@
+{
+	"name": "pipeline_blob_to_db",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"sqlWriterStoredProcedureName": "[dbo].[loadorderplan]",
+						"sqlWriterTableType": "orderplan_type",
+						"storedProcedureTableTypeParameterName": "orderplan"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "HOSTLOCID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "hostlocid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": " HOSTPARTID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "hostpartid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": " HOSTVENDORLOCID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "hostvendorlocid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": " PLANORDERDATE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "planorderdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": " PLANSHIPDATE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "planshipdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": " PLANQUANTITY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "quantity",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "source_file_orderplan",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "target_db_orderplan",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

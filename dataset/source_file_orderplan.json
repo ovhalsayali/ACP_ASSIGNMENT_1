@@ -1,0 +1,49 @@
+{
+	"name": "source_file_orderplan",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageSayali",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "IPCSDU_ORDER_PLAN",
+				"container": "sayali"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "HOSTLOCID",
+				"type": "String"
+			},
+			{
+				"name": " HOSTPARTID",
+				"type": "String"
+			},
+			{
+				"name": " HOSTVENDORLOCID",
+				"type": "String"
+			},
+			{
+				"name": " PLANORDERDATE",
+				"type": "String"
+			},
+			{
+				"name": " PLANSHIPDATE",
+				"type": "String"
+			},
+			{
+				"name": " PLANQUANTITY",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

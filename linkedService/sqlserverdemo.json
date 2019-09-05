@@ -1,0 +1,16 @@
+{
+	"name": "sqlserverdemo",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=OP-IN-7NYW3W2\\SAYALISQL;initial catalog=demo;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlN2ExOGM4NS1lOWIxLTQ0ZjMtYWM0Mi01Njg4MzdkNTIyNGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

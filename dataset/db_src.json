@@ -1,0 +1,26 @@
+{
+	"name": "db_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqlserver1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "location_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "vendor_id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[vendor_info]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

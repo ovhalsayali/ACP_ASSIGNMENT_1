@@ -1,0 +1,45 @@
+{
+	"name": "target_db_orderplan",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqlserver1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "hostlocid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "hostpartid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "hostvendorlocid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "planorderdate",
+				"type": "date"
+			},
+			{
+				"name": "planshipdate",
+				"type": "date"
+			},
+			{
+				"name": "quantity",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[order_plan]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

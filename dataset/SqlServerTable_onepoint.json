@@ -1,0 +1,26 @@
+{
+	"name": "SqlServerTable_onepoint",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "source_warehouse",
+				"type": "varchar"
+			},
+			{
+				"name": "spm_location",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_spm_location"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
