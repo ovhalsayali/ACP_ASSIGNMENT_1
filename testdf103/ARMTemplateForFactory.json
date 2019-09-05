@@ -1643,6 +1643,7 @@
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "It also finds location based on the hostlocid",
 				"activities": [
 					{
 						"name": "Copy Data1",
