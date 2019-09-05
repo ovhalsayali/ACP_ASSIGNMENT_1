@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Copy Data1",
+				"description": "This pipeline is just for creating 3 different files based on the hostlocid",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
