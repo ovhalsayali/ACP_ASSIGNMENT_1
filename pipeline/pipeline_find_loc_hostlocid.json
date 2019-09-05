@@ -1,6 +1,7 @@
 {
 	"name": "pipeline_find_loc_hostlocid",
 	"properties": {
+		"description": "It also finds location based on the hostlocid",
 		"activities": [
 			{
 				"name": "Copy Data1",
