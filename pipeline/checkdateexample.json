@@ -26,11 +26,21 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
+					"sink": {
+						"type": "SqlServerSink",
+						"tableOption": "autoCreate"
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "fileinput",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "demtable",
 						"type": "DatasetReference"
 					}
 				]
