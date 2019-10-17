@@ -19,7 +19,7 @@
 			}
 		],
 		"typeProperties": {
-			"tableName": "[dbo].[dem]"
+			"tableName": "[dbo].[tbl_dem]"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

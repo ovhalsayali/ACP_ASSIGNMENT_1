@@ -9,20 +9,17 @@
 		"type": "SqlServerTable",
 		"schema": [
 			{
-				"name": "id1",
+				"name": "id",
 				"type": "int",
-				"precision": 10,
-				"scale": 0
+				"precision": 10
 			},
 			{
-				"name": "name",
-				"type": "varchar",
-				"precision": 0,
-				"scale": 0
+				"name": "startdate",
+				"type": "date"
 			}
 		],
 		"typeProperties": {
-			"tableName": "[dbo].[employee]"
+			"tableName": "[dbo].[tbl_dem]"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

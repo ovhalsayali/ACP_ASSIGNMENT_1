@@ -28,6 +28,15 @@
 					},
 					"sink": {
 						"type": "SqlServerSink",
+						"sqlWriterStoredProcedureName": "[dbo].[tbl_dem_proc]",
+						"storedProcedureParameters": {
+							"id1": {
+								"type": "Int32"
+							},
+							"startdate": {
+								"type": "DateTime"
+							}
+						},
 						"tableOption": "autoCreate"
 					},
 					"enableStaging": false
