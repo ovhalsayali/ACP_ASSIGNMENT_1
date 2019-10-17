@@ -1,0 +1,26 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqlserver1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "joindate",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[dem]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
