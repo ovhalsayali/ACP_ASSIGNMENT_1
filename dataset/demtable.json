@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTable1",
+	"name": "demtable",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "sqlserver1",
