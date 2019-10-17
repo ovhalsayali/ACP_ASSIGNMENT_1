@@ -46,7 +46,10 @@
 				"inputs": [
 					{
 						"referenceName": "TestPipeline",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"EmpId": 99
+						}
 					}
 				],
 				"outputs": [
