@@ -28,15 +28,9 @@
 					},
 					"sink": {
 						"type": "SqlServerSink",
-						"sqlWriterStoredProcedureName": "[dbo].[tbl_dem_proc]",
-						"storedProcedureParameters": {
-							"id1": {
-								"type": "Int32"
-							},
-							"startdate": {
-								"type": "DateTime"
-							}
-						},
+						"sqlWriterStoredProcedureName": "[dbo].[worker_proc]",
+						"sqlWriterTableType": "workertbltype",
+						"storedProcedureTableTypeParameterName": "worker",
 						"tableOption": "autoCreate"
 					},
 					"enableStaging": false
